@@ -3,16 +3,12 @@ project(ortools_vendor LANGUAGES CXX VERSION "9.9.0")
 
 set(CMAKE_CXX_STANDARD 17)
 
-if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Release)
-endif(NOT CMAKE_BUILD_TYPE)
+set(CMAKE_BUILD_TYPE Release)
 
-
+find_package(ament_cmake)
 if(ament_cmake_FOUND)
   find_package(ament_cmake REQUIRED)
   find_package(ament_cmake_vendor_package REQUIRED)
-
-  ament_add_default_options()
 
   find_package(ortools QUIET NO_CMAKE_PACKAGE_REGISTRY)
 
@@ -24,13 +20,26 @@ if(ament_cmake_FOUND)
     VCS_VERSION v9.9
     CMAKE_ARGS
       "-DCMAKE_CXX_FLAGS=${ORTOOLS_CXX_FLAGS}"
+      -DCMAKE_BUILD_TYPE=Release
       -DBUILD_DEPS:BOOL=ON
       -DBUILD_SAMPLES:BOOL=OFF
       -DBUILD_EXAMPLES:BOOL=OFF
+      -DBUILD_LP_PARSER:BOOL=OFF
+      -DBUILD_MATH_OPT:BOOL=OFF
+      -DUSE_BOP:BOOL=OFF
+      -DUSE_COINOR:BOOL=OFF
+      -DUSE_CPLEX:BOOL=OFF
+      -DUSE_GLOP:BOOL=OFF
+      -DUSE_GLPK:BOOL=OFF
+      -DUSE_GUROBI:BOOL=ON #OFF not supported since dynamically loaded
+      -DUSE_HIGHS:BOOL=OFF
+      -DUSE_PDLP:BOOL=OFF
+      -DUSE_SCIP:BOOL=OFF
+      -DUSE_XPRESS:BOOL=OFF
   )
 
   ament_package(
-    CONFIG_EXTRAS "ortools_vendor-extras.cmake.in"
+    CONFIG_EXTRAS "ortools_vendor-extras.cmake"
   )
 else(ament_cmake_FOUND)
   set(BUILD_DEPS ON)
