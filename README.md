@@ -1,3 +1,26 @@
+## ortools_vendor (noetic) - 9.9.0-6
+
+The packages in the `ortools_vendor` repository were released into the `noetic` distro by running `/usr/bin/bloom-release ortools_vendor --track noetic --rosdistro noetic` on `Mon, 29 Apr 2024 09:24:24 -0000`
+
+The `ortools_vendor` package was released.
+
+Version of package(s) in repository `ortools_vendor`:
+
+- upstream repository: https://github.com/Fields2Cover/ortools_vendor
+- release repository: https://github.com/ros2-gbp/ortools_vendor-release.git
+- rosdistro version: `9.9.0-5`
+- old version: `9.9.0-5`
+- new version: `9.9.0-6`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## ortools_vendor (iron) - 9.9.0-8
 
 The packages in the `ortools_vendor` repository were released into the `iron` distro by running `/usr/bin/bloom-release ortools_vendor --track iron --rosdistro iron` on `Mon, 29 Apr 2024 09:22:26 -0000`
