@@ -1,3 +1,26 @@
+## ortools_vendor (humble) - 9.9.0-6
+
+The packages in the `ortools_vendor` repository were released into the `humble` distro by running `/usr/bin/bloom-release ortools_vendor --track humble --rosdistro humble` on `Sun, 09 Jun 2024 07:46:49 -0000`
+
+The `ortools_vendor` package was released.
+
+Version of package(s) in repository `ortools_vendor`:
+
+- upstream repository: https://github.com/Fields2Cover/ortools_vendor
+- release repository: https://github.com/ros2-gbp/ortools_vendor-release.git
+- rosdistro version: `9.9.0-5`
+- old version: `9.9.0-5`
+- new version: `9.9.0-6`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## ortools_vendor (rolling) - 9.9.0-9
 
 The packages in the `ortools_vendor` repository were released into the `rolling` distro by running `/usr/bin/bloom-release ortools_vendor --track rolling --rosdistro rolling` on `Sun, 09 Jun 2024 07:44:22 -0000`
