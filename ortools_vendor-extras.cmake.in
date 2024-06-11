@@ -1,18 +1,8 @@
-# add the local Modules directory to the modules path
-if(WIN32)
-  set(ortools_DIR "${@PROJECT_NAME@_DIR}/../../../opt/ortools_vendor/CMake")
-else()
-  set(ortools_DIR "${@PROJECT_NAME@_DIR}/../../../opt/ortools_vendor/share/cmake/ortools")
-endif()
-message(STATUS "Setting ortools_DIR to: '${ortools_DIR}'")
+set(ORTOOLS_DIR "${@PROJECT_NAME@_DIR}/../../../opt/ortools_vendor")
+list(INSERT CMAKE_PREFIX_PATH 0 "${ORTOOLS_DIR}")
+message(STATUS "Prepending to CMAKE_PREFIX_PATH: '${ORTOOLS_DIR}'")
+find_package(ortools REQUIRED NO_SYSTEM_ENVIRONMENT_PATH)
 
-find_package(ortools REQUIRED)
+add_library(ortools_vendor::ortools ALIAS ortools::ortools)
 
-set(ortools_vendor_LIBRARIES ${ORTOOLS_LIBRARIES})
-set(ortools_vendor_INCLUDE_DIRS ${ORTOOLS_INCLUDE_DIR})
 
-if(TARGET ortools::ortools)
-  list(APPEND ortools_vendor_TARGETS ortools::ortools)
-else()
-  list(APPEND ortools_vendor_TARGETS ortools)
-endif()
