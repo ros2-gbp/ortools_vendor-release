@@ -1,0 +1,12 @@
+Source: ros-kilted-ortools-vendor
+Section: misc
+Priority: optional
+Maintainer: Gonzalo Mier <gonzalo.miermunoz@wur.nl>
+Build-Depends: debhelper (>= 9.0.0), git, ros-kilted-ament-cmake, ros-kilted-ament-cmake-vendor-package, ros-kilted-ament-cmake-xmllint <!nocheck>, ros-kilted-ament-lint-auto <!nocheck>, ros-kilted-ros-workspace
+Homepage: https://github.com/google/or-tools
+Standards-Version: 3.9.2
+
+Package: ros-kilted-ortools-vendor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-ros-workspace
+Description: Wrapper around ortools, it provides a fixed CMake module and an ExternalProject build of it.
