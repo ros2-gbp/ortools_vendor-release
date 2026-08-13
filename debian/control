@@ -1,0 +1,12 @@
+Source: ros-lyrical-ortools-vendor
+Section: misc
+Priority: optional
+Maintainer: "Gonzalo Mier" <gonzalo.miermunoz@wur.nl>
+Build-Depends: debhelper (>= 9.0.0), git, ros-lyrical-ament-cmake, ros-lyrical-ament-cmake-vendor-package, ros-lyrical-ament-cmake-xmllint <!nocheck>, ros-lyrical-ament-lint-auto <!nocheck>, ros-lyrical-ros-workspace
+Homepage: https://github.com/google/or-tools
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-ortools-vendor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-ros-workspace
+Description: Wrapper around ortools, it provides a fixed CMake module and an ExternalProject build of it.
