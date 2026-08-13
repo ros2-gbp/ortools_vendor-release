@@ -1,3 +1,26 @@
+## ortools_vendor (jazzy) - 9.9.1-2
+
+The packages in the `ortools_vendor` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release ortools_vendor --track jazzy --rosdistro jazzy` on `Thu, 13 Aug 2026 08:18:07 -0000`
+
+The `ortools_vendor` package was released.
+
+Version of package(s) in repository `ortools_vendor`:
+
+- upstream repository: https://github.com/Fields2Cover/ortools_vendor
+- release repository: https://github.com/ros2-gbp/ortools_vendor-release.git
+- rosdistro version: `9.9.0-6`
+- old version: `9.9.1-1`
+- new version: `9.9.1-2`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## ortools_vendor (kilted) - 9.9.1-3
 
 The packages in the `ortools_vendor` repository were released into the `kilted` distro by running `/usr/bin/bloom-release ortools_vendor --track kilted --rosdistro kilted` on `Thu, 13 Aug 2026 08:15:53 -0000`
